@@ -1,4 +1,14 @@
 JamieLawrenceWedding::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/directions"
+
+  get "static_pages/registry"
+
+  get "static_pages/contact"
+
+  get "static_pages/photos"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
