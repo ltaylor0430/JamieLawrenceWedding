@@ -9,6 +9,9 @@ JamieLawrenceWedding::Application.routes.draw do
 
   get "static_pages/photos"
 
+  get "static_pages/story"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
