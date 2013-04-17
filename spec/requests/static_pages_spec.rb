@@ -9,9 +9,14 @@ describe "StaticPages" do
       visit '/static_pages/home' 
       page.should have_content('Our Wedding')
     end
-    it "should have the title 'Our Wedding'" do
+     it "should have the base title 'Jamie Harrison and Lawrence Taylor'" do
 			visit '/static_pages/home'
   		page.should have_selector('title',
+                    :text => "#{base_title}")
+    end
+    it "should have not have the custom title 'Our Wedding'" do
+			visit '/static_pages/home'
+  		page.should_not have_selector('title',
                     :text => "#{base_title} | Our Wedding")
     end
   end
