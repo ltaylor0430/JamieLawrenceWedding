@@ -1,6 +1,103 @@
-<h1>Our Wedding</h1>
+
+	<script type="text/javascript">
+	var directionsDisplay;
+	var directionsService;
+	var map;
+	function initialize() {
+		directionsService= new google.maps.DirectionsService()
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		var atlantaAirport = new google.maps.LatLng(33.641527,-84.445553);
+		var chapel = new google.maps.LatLng(33.470739,-81.997696);
+		var request ={
+		origin:atlantaAirport,
+		destination:chapel,
+		travelMode:google.maps.TravelMode.DRIVING,
+
+		waypoints: [ {location: new google.maps.LatLng(33.521728,-82.027134), stopover:false}, //exit 200
+					{location: new google.maps.LatLng(33.481165,-81.982276), stopover:false}, //15th street
+					{location: new google.maps.LatLng(33.47048,-81.992539), stopover:false}, //laney walker
+					{location: new google.maps.LatLng(33.47048,-81.992539), stopover:false} 
+				  ]
+				};
+        var mapOptions = {
+          center: atlantaAirport,
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+         directionsDisplay.setMap(map);
+         directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+         directionsService.route(request, function(result, status) {
+		    if (status == google.maps.DirectionsStatus.OK) {
+			      directionsDisplay.setDirections(result);
+			}
+	     });
+      }
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+   
+  });
+
+  
+});
+
+function loadScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCFeQ4fy8Mqwcpp7BRsTjCU6trwurubXrM&sensor=true&callback=initialize";
+  document.body.appendChild(script);
+   
+}
+window.onload = loadScript;
+</script>
+
+<div class="groups">
+<h1>Our Stories</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar augue porta nulla hendrerit convallis. Pellentesque sapien nisi, bibendum vitae accumsan at, ornare a ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur sodales feugiat metus sit amet pretium. In pretium, metus non placerat pellentesque, eros sem gravida tellus, nec scelerisque libero eros et mi. Duis fringilla rhoncus fringilla. Proin blandit neque gravida neque congue mollis eget egestas orci. Nullam eleifend magna sit amet neque porttitor nec ullamcorper est pellentesque. Nulla facilisi. Nam ut placerat odio. Nulla pulvinar, augue vitae scelerisque iaculis, tellus quam ullamcorper magna, et lobortis orci nisl in dolor. Nullam non nibh eu eros facilisis eleifend. Sed sed elit eget nisl sollicitudin aliquet. Ut et ipsum et dolor iaculis auctor rutrum suscipit enim. Nunc viverra adipiscing posuere.</p>
+</div>
+
+<div id="albumn" class="groups">
+<h1>Photo Albums</h1>
 <p>
-  This is the home page for the
-  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
+	 <div class="flexslider" style="height:720px !important;overflow:hidden">
+          <ul class="slides">
+            <li>
+  	    	    <%=image_tag "photoalbum/engage1.jpg"  %>
+  	    		</li>
+  	    		<li>
+  	    	    <%=image_tag "photoalbum/engage2.jpg"   %>
+  	    		</li>
+  	    		<li>
+  	    	    <%=image_tag "photoalbum/us_in_car.jpg"   %>
+  	    		</li>
+  	    		 
+          </ul>
+        </div>
+
 </p>
+</div>
+
+<div id="registry" class="groups">
+<h1>Wedding Registry</h1>
+<p>
+Suspendisse luctus sem eu sem volutpat eget placerat tortor sagittis. Pellentesque sed hendrerit purus. Suspendisse mollis nunc in lacus ultricies non elementum lacus faucibus. Vestibulum tempor porttitor diam id tempor. Suspendisse pharetra metus vestibulum justo pharetra dapibus. Phasellus rhoncus nulla ac enim convallis vehicula. Maecenas blandit sagittis porta. Nunc justo lorem, tempor eget pretium non, feugiat ut erat. Mauris luctus mauris ac orci vulputate ac molestie sapien accumsan.</p>
+</div>
+
+<div id="directions" class="clearfix groups">
+	<h1>Directions</h1>
+  <h4>Gilbert Lambuth Memorial Chapel</h4>
+
+	<div id="directionsPanel" style="font-size:1.1em;float:left;width:40%;padding:2px;height:350px;overflow:scroll"></div>
+	 <div id="map-canvas" name="map-canvas" style="float:right;width: 59%; height: 100%"></div> 
+</div>
+
+
+<div class="groups">
+<h1>Contact Us</h1>
+<p><Groom: <a href="mailto:ltaylor0430@gmail.com">Lawrence Taylor</a>
+
+</p>
+</div>
+ 

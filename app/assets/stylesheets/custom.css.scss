@@ -1,0 +1,143 @@
+@import "bootstrap";
+/* universal */
+
+$teal: rgba(204,255,204,1);
+html {
+  overflow-y: scroll;
+  height:100%
+}
+
+body {
+  padding-top: 0px;
+   background-image:url('bg.jpg');
+  height:100%; 
+  margin: 0; 
+  padding: 0;
+  background-repeat:repeat-x;
+  background-position:0 0px;
+  max-height:100%;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/*typography */
+h1,h2,h3,h4,h5,h6 {
+	line-height:1;
+}
+h1 {
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 40px;
+    line-height: 70px;
+}
+ 
+p {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+li {
+     font-family: 'Lobster', Georgia, Times, serif;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+#contentBg {
+   
+  min-width:1050px;
+   
+}
+.content {
+  background-color:rgba(white,0.4);
+  margin-top:60px;
+  background-repeat:repeat-x;
+  box-sizing:border-box;
+  border-radius:10px;
+  padding:10px;
+
+}
+.content-left {
+  
+ background-image:url('left_content.png');
+}
+.content-right {
+background-repeat:none;
+
+float:left;
+ background-image:url('right_content.png');
+}
+.topHeader {
+  /*background-image:url('header.png');*/
+  background-repeat:repeat-x;
+
+/*   background: url(Majorca-Golf.jpg) no-repeat center center fixed;*/
+}
+.groups {
+  margin:30px; 
+border:rgba(black,0.2) 2px solid;
+padding:15px;
+ 
+}
+.groups .hide {
+  
+  }
+#logo:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}  
+
+footer a:hover { 
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+ #map-canvas { height: 350px !important }
