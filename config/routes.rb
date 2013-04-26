@@ -1,15 +1,6 @@
 JamieLawrenceWedding::Application.routes.draw do
-  get "static_pages/home"
-
-  get "static_pages/directions"
-
-  get "static_pages/registry"
-
-  get "static_pages/contact"
-
-  get "static_pages/photos"
-
-  get "static_pages/story"
+  root to: 'static_pages#home'
+  match '/directions', to: 'static_pages#home/#directions'
 
 
   # The priority is based upon order of creation:

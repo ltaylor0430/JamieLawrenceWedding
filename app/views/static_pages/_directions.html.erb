@@ -1,0 +1,55 @@
+<!-- load google maps  asynchronously-->
+<script type="text/javascript">
+var directionsDisplay;
+	var directionsService;
+	var map;
+	function initialize() {
+		directionsService= new google.maps.DirectionsService()
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		var atlantaAirport = new google.maps.LatLng(33.641527,-84.445553);
+		var chapel = new google.maps.LatLng(33.470739,-81.997696);
+		var request ={
+		origin:atlantaAirport,
+		destination:chapel,
+		travelMode:google.maps.TravelMode.DRIVING,
+
+		waypoints: [ {location: new google.maps.LatLng(33.521728,-82.027134), stopover:false}, //exit 200
+					{location: new google.maps.LatLng(33.481165,-81.982276), stopover:false}, //15th street
+					{location: new google.maps.LatLng(33.47048,-81.992539), stopover:false}, //laney walker
+					{location: new google.maps.LatLng(33.47048,-81.992539), stopover:false} 
+				  ]
+				};
+        var mapOptions = {
+          center: atlantaAirport,
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+         directionsDisplay.setMap(map);
+         directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+         directionsService.route(request, function(result, status) {
+		    if (status == google.maps.DirectionsStatus.OK) {
+			      directionsDisplay.setDirections(result);
+			}
+	     });
+      }
+function loadScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCFeQ4fy8Mqwcpp7BRsTjCU6trwurubXrM&sensor=true&callback=initialize";
+  document.body.appendChild(script);
+   
+}
+window.onload = loadScript;
+</script>
+<h1>Directions</h1>
+  <h4>Gilbert Lambuth Memorial Chapel</h4>
+  <hr/>
+  <p style="float:right;width:100%;">Start location:
+  <input type ="text" name="startLocation" style="width:60%"/>
+  <input type="button" name="submit"  class="btn btn-large btn-primary"  style="margin-left:15px;padding:10px;" value ="Submit"/></p>
+
+    <div style="clearfix margin-top:10px;">
+	 <div id="directionsPanel" style="font-size:1.1em;float:left;width:40%;padding:2px;height:350px;overflow:scroll"></div>
+	 <div id="map-canvas" name="map-canvas" style="float:right;width: 59%; height: 100%"></div> 
+	</div>

@@ -8,60 +8,17 @@
   <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Cabin", media:"all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
-</head>
+  <%= render 'layouts/shim' %>    
+  </head>
+  
 <body>  
-
-     <header class="navbar navbar-fixed-top">
-        <div class="navbar-inner topHeader">
-          <div class="container">
-            <ul class="nav nav-pills pull-right">
-
-              <li class="active"><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Our Stories",    '#' %></li>
-              <li><%= link_to "Wedding Registry", '#' %></li>
-              <li><%= link_to "Photo Albums",    '#' %></li>
-              <li><%= link_to "Directions",    '#' %></li>
-              <li><%= link_to "Contact Us", '#' %></li>
-            </ul>      
-          </div>
-        </div>
-  </header>
+  <%= render 'layouts/header' %>    
   <div id="contentBg" class="center">
-  <p  id="imgContent"  style="z-index:-20"><%=image_tag'jamieLawrence_windowshot.jpg', size:"1149x850" %>
-    </p>
+  <p id="imgContent"  style="z-index:-20"><%=image_tag'jamieLawrence_windowshot.jpg', size:"1149x850" %></p>
  </div>
   <div class="clearfix container content">
      <%= yield %>
    </div>
-<footer class="footer navbar navbar-fixed-bottom">
-   
- 
-  <nav>
-  <object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong289323826" name="gsSong289323826"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=2893238&style=metal&p=1" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=2893238&style=metal&p=1" /><span><a href="http://grooveshark.com/search/song?q=Dizzy%20Gillespie%20Desafinado" title="Desafinado by Dizzy Gillespie on Grooveshark">Desafinado by Dizzy Gillespie on Grooveshark</a></span></object></object>
-</nav>
- 
-</footer>
- <script type="text/javascript">
-    var fixed = false;
-/*
-    $(window).scroll(function() {
-        if( $(window).scrollTop() >= 100 ) {
-            if( !fixed ) {
-                fixed = true;
-                $('#imgContent').css({position:'fixed',top:5}); // Or set top:20px; in CSS
-            }                                           // It won't matter when static
-        } else {
-            if( fixed ) {
-                fixed = false;
-                $('#imgContent').css({position:'static'});
-            }
-        }
-    });*/
-</script>
-
+    <%= render 'layouts/footer' %>    
   </body>
 </html>
