@@ -32,12 +32,13 @@ $('#contentContainer').addClass(' animated bounceInDown');
    	});
    	//fade out current selection and show the new one
    	$("#contentContainer").addClass("bounceOutUp");
-   	$(active).toggleClass("hide");
+ 
      	
    	//remove 
    	var wait = window.setTimeout( function(){
 			$('#contentContainer').removeClass("bounceOutUp");
 			$('#contentContainer').addClass('bounceInDown');
+			  	$(active).toggleClass("hide");
 			$(hash).toggleClass("hide");
 			if (hash == "#album")
    			{
