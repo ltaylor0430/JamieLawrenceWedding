@@ -8,13 +8,13 @@ html {
 }
 
 body {
-  padding-top: 0px;
-   background-image:url('bg.jpg');
-  height:100%; 
-  margin: 0; 
-  padding: 0;
-  background-repeat:repeat-x;
-  background-position:0 0px;
+ 
+  background:url('bg02.jpg') repeat-x fixed;
+ 
+  height:100%;
+  padding-top:15px;
+   background-position:0 -0x;
+ 
   max-height:100%;
 }
 
@@ -68,18 +68,29 @@ li {
   line-height: 1;
 }
 #contentBg {
-   
+   margin-left:50px;
   min-width:1050px;
-   
+  padding-top:0px;
+  height:850px;
+  position:fixed;
+  background:url('jamieLawrence_windowshot-04.jpg') no-repeat left top fixed;
+ 
 }
 .content {
-  background-color:rgba(white,0.4);
-  margin-top:60px;
+  background-color:rgba(white,.2);
+  margin-top:0px;
   background-repeat:repeat-x;
   box-sizing:border-box;
   border-radius:10px;
-  padding:10px;
+  padding:2px;
+  position:relative;
+  margin-bottom:200px;
+  margin-right:10px;
 
+}
+.inner {
+   padding:15px;
+   background-color:rgba(#eaeaea,.7); 
 }
 .content-left {
   
@@ -98,9 +109,10 @@ float:left;
 /*   background: url(Majorca-Golf.jpg) no-repeat center center fixed;*/
 }
 .groups {
-  margin:30px; 
-border:rgba(black,0.2) 2px solid;
-padding:15px;
+  margin:10px; 
+border:rgba(white,0.5) 2px solid;
+padding:5px;
+
  
 }
 .groups .hide {
@@ -113,10 +125,11 @@ padding:15px;
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
   
-  color: #999;
+       line-height: 10px !important;
+ position:fixed;bottom:0px;width:100%;margin-right:40px; 
+ margin-top:150px;
+  color: #aaccf2;
 }
 
 footer a {
@@ -140,4 +153,5 @@ footer ul li {
   float: left;
   margin-left: 10px;
 }
- #map-canvas { height: 350px !important }
+#map-canvas { height: 350px !important;float:right;width: 59%;}
+#map-canvas-reception { height: 350px !important;float:right;width: 59%; }

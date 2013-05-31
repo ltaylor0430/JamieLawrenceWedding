@@ -1,29 +1,27 @@
 
-  <script type="text/javascript">
-  
-// Can also be used with $(document).ready()
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
-});
-</script>
+
 
 <h1>Photo Albums</h1>
-<div class="flexslider" style="height:720px !important;">
+<div class="flexslider" style="overflow:hidden;height:420px !important;">
   <ul class="slides" style="">
 
     <li>
-	    <%=image_tag "photoalbum/engage1.jpg"  %>
+	    <%=image_tag "photoalbum/engage1.jpg", style:"height:720px;"    %>
 		</li>
 		<li>
-	    <%=image_tag "photoalbum/engage2.jpg"   %>
+	    <%=image_tag "photoalbum/engage2.jpg", style:"height:720px;"  %>
 		</li>
+    <li>
+      <%=image_tag "photoalbum/engage3.jpg", style:"height:720px;"  %>
+    </li>
 		  <li>
       <%=image_tag "photoalbum/2009-venezuela540x720.jpg", size:"540x720",style:"width:540px;height:720px;"   %>
     </li>
     <li>
-      <%=image_tag "photoalbum/engage2.jpg"   %>
+      <%=image_tag "photoalbum/2009-venezuela2_960x720.jpg", style:"width:960px;height:720px"   %>
     </li>
+    <% Dir["assets/images/photoalbum/*"].each do |file| %>
+       <li><%=image_tag file[/\/.*/], style:"height:720px" %></li>
+    <% end %>
   </ul>
 </div>

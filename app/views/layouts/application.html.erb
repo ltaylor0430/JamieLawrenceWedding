@@ -13,12 +13,24 @@
   
 <body>  
   <%= render 'layouts/header' %>    
-  <div id="contentBg" class="center">
-  <p id="imgContent"  style="z-index:-20"><%=image_tag'jamieLawrence_windowshot.jpg', size:"1149x850" %></p>
- </div>
-  <div class="clearfix container content">
+  <div id="contentBg"></div>
+ <div class="row-fluid" style="margin-top:90px;">
+  <div id="contentContainer" class="clearfix offset6 content">
      <%= yield %>
    </div>
+<footer class="footer"  style="">
+    <div class="inner offset6" style="margin-right:10px;padding-top:0;background-color:#EAEAEA;" >
+ <div id="next"  style="float:left;">
+  <h3>Photo Albums</h3>
+</div>
+<div class="clearfix"></div>
+</div>
+
+</footer>
+   </div>
+   
     <%= render 'layouts/footer' %>    
   </body>
+  
+  </script>
 </html>
