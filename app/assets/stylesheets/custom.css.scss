@@ -1,23 +1,24 @@
 @import "bootstrap";
+
 /* universal */
 
 $teal: rgba(204,255,204,1);
 html {
   overflow-y: scroll;
-  height:100%
+   
 }
 
 body {
- 
-  background:url('bg02.jpg') repeat-x fixed;
- 
+   padding-top: 40px;
+  background:url('bg02.jpg') repeat-x;
+ font-family: 'BentonSans', sans-serif;
   height:100%;
-  padding-top:15px;
-   background-position:0 -0x;
+ margin:0;
+   background-position:0px 0px;
  
-  max-height:100%;
+  
 }
-
+@import "bootstrap-responsive";
 section {
   overflow: auto;
 }
@@ -45,7 +46,7 @@ h1 {
 }
  
 p {
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+   font-family: 'BentonSans', sans-serif;
     font-size: 1.1em;
     line-height: 1.7em;
 }
@@ -68,29 +69,33 @@ li {
   line-height: 1;
 }
 #contentBg {
-   margin-left:50px;
-  min-width:1050px;
+   margin-left:0px;
+  margin-right:0px;
+  min-height:800px;
+  width:1050px;
   padding-top:0px;
-  height:850px;
-  position:fixed;
-  background:url('jamieLawrence_windowshot-04.jpg') no-repeat left top fixed;
  
+  background:url('jamieLawrence_windowshot-04.jpg') left center no-repeat;
+  background-position:-300px -40px;
 }
 .content {
   background-color:rgba(white,.2);
   margin-top:0px;
   background-repeat:repeat-x;
   box-sizing:border-box;
+   margin-left:500px;
   border-radius:10px;
-  padding:2px;
-  position:relative;
-  margin-bottom:200px;
+  padding:0px;
+  z-index:500;
+  margin-bottom:0px;
   margin-right:10px;
-
+  min-width:700px;
+  
 }
 .inner {
    padding:15px;
    background-color:rgba(#eaeaea,.7); 
+     
 }
 .content-left {
   
@@ -102,12 +107,7 @@ background-repeat:none;
 float:left;
  background-image:url('right_content.png');
 }
-.topHeader {
-  /*background-image:url('header.png');*/
-  background-repeat:repeat-x;
-
-/*   background: url(Majorca-Golf.jpg) no-repeat center center fixed;*/
-}
+ 
 .groups {
   margin:10px; 
 border:rgba(white,0.5) 2px solid;
@@ -125,11 +125,15 @@ padding:5px;
 /* footer */
 
 footer {
-  
-       line-height: 10px !important;
- position:fixed;bottom:0px;width:100%;margin-right:40px; 
- margin-top:150px;
-  color: #aaccf2;
+  position:fixed;
+        float:left;
+       width:150px;
+       margin-top:0px;
+   margin-left:0px;
+ box-shadow: 0px 1px 2px #EEEEEE;
+   color: #aaccf2;
+   margin-right:10px;padding-top:0;
+   background-color:rgba(#EAEAEA,1);
 }
 
 footer a {

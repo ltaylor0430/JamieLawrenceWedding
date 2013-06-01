@@ -1,22 +1,25 @@
-
 $(document).ready(function () {
- 
+if (!window.console) console = {debug: function() {}};
+
+ $(window).resize(function() {
+  $('body').css('margin','0px');
+});
 $('#contentContainer').addClass(' animated bounceInDown');
  
 });
- 
+
   $(function() {
   var active;
    var links = $('a.link').click(function(event) {
-   	   event.preventDefault();
+    event.preventDefault();
 
-    console.debug("removing class active.");
-   console.debug(event);
+    console.log("removing class active.");
+    console.log(event);
    var hash = event.target.hash;
-   console.debug(hash);
-   	$("#headerList > li a").each(function(i,k) {
-   		
-  	 if ($(this).parent().hasClass("active"))
+   console.log(hash);
+  $("#headerList > li a").each(function(i,k) {
+ 		
+   if ($(this).parent().hasClass("active"))
   	 	active = k.hash;
   	 if (hash == (k.hash))
    	 {
@@ -37,6 +40,7 @@ $('#contentContainer').addClass(' animated bounceInDown');
    	//remove 
    	var wait = window.setTimeout( function(){
 			$('#contentContainer').removeClass("bounceOutUp");
+			window.scrollTo(0,0);
 			$('#contentContainer').addClass('bounceInDown');
 			  	$(active).toggleClass("hide");
 			$(hash).toggleClass("hide");
@@ -44,7 +48,7 @@ $('#contentContainer').addClass(' animated bounceInDown');
    			{
 	   	    
 				// Can also be used with $(document).ready()
-				 console.debug("album tag");
+				 console.log("album tag");
 				$('.flexslider').flexslider({
 				    animation: "slide"
 				});
@@ -54,7 +58,7 @@ $('#contentContainer').addClass(' animated bounceInDown');
 		   else if ((hash == "#directions" )&& (directionsService == undefined))
 		   {
 			   	loadScript();
-			   	console.debug("google script loaded");
+			   	console.log("google script loaded");
 		   }
 			},
 			400

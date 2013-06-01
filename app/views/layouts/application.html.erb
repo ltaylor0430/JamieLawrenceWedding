@@ -2,10 +2,11 @@
 <html>
 <head>
   <title><%=full_title(yield(:title)) %></title>
-   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Lobster", media:"all" %>
   <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Cabin", media:"all" %>
+  <link rel="shortcut icon" href="<%=image_path 'favicon.ico'%>" >
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>    
@@ -13,22 +14,24 @@
   
 <body>  
   <%= render 'layouts/header' %>    
-  <div id="contentBg"></div>
- <div class="row-fluid" style="margin-top:90px;">
-  <div id="contentContainer" class="clearfix offset6 content">
-     <%= yield %>
-   </div>
-<footer class="footer"  style="">
-    <div class="inner offset6" style="margin-right:10px;padding-top:0;background-color:#EAEAEA;" >
- <div id="next"  style="float:left;">
-  <h3>Jamie and Lawrence | September 14, 2013</h3>
+  <div id="contentBg">
+    <footer class="footer"  style="">
+    <div class=" pull-right" style="margin-right:10px" >
+ <div id="next" class=""  style="text-align:right">
+ <h3><span style="color:orange">Jamie</span><br/>Lawrence<br/><span style="color:black">September 14, 2013</span></h3>
 </div>
 <div class="clearfix"></div>
 </div>
 
 </footer>
+     
+ <div class="row" style="">
+  <div id="contentContainer" class="pull-left content">
+     <%= yield %>
    </div>
-   
+
+   </div>
+</div>
     <%= render 'layouts/footer' %>    
   </body>
   
