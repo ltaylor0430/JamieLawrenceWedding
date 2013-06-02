@@ -5,20 +5,75 @@
 $teal: rgba(204,255,204,1);
 html {
   overflow-y: scroll;
-   
+  margin:0;
 }
 
 body {
    padding-top: 40px;
-  background:url('bg02.jpg') repeat-x;
- font-family: 'BentonSans', sans-serif;
-  height:100%;
- margin:0;
+    padding-left:0;
+   background:url('bg02.jpg') repeat-x;
+   font-family: 'BentonSans', sans-serif;
+  /*height:100%;*/
+   margin:0;
    background-position:0px 0px;
+
  
   
+
+}
+@media (max-width: 798px) {
+
+  // Padding to set content in a bit
+  body {
+    padding-left: 0px !important;
+    padding-right:0px !important;
+    background:url('bg02.jpg') repeat-x !important;
+   
+  }
+ #contentBg {
+ 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+ 
+}
+.content {
+
+  margin-left:0px !important;
+
+  min-width:150px !important;
+}
+}
+/* Remove top padding when top navbar goes static in narrow viewports */
+ 
+.navbar .btn-navbar {
+   padding:7px 10px;
+  }
+@media (min-width: 980px) and (max-width: 1126px) {
+    .nav-collapse .collapse{
+        height:0 !important;
+       overflow:hidden !important;
+    }
+}
+ .navbar .container {
+  width: auto;
+}
+
+header {
+padding:0; 
+line-height:0;
+ 
 }
 @import "bootstrap-responsive";
+
+
+.topHeader
+{
+  height:auto;
+}
 section {
   overflow: auto;
 }
@@ -60,35 +115,46 @@ li {
 #logo {
   float: left;
   margin-right: 10px;
+  margin-bottom:0;
   font-size: 1.7em;
   color: #000;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
+  width:320px;
   font-weight: bold;
   line-height: 1;
 }
+.navbar {
+  margin:0;
+
+}
+#containerDiv {
+   background:url('bg02.jpg') repeat-x;
+}
 #contentBg {
-   margin-left:0px;
-  margin-right:0px;
+   margin:0;
   min-height:800px;
-  width:1050px;
-  padding-top:0px;
- 
-  background:url('jamieLawrence_windowshot-04.jpg') left center no-repeat;
+  /*width:100%;*/
+/*  height:100%;*/
+  padding:0;
+
+  background:url('jamieLawrence_windowshot-04.jpg') no-repeat;
   background-position:-300px -40px;
 }
 .content {
   background-color:rgba(white,.2);
   margin-top:0px;
+
   background-repeat:repeat-x;
   box-sizing:border-box;
    margin-left:500px;
+    
   border-radius:10px;
   padding:0px;
-  z-index:500;
+ 
   margin-bottom:0px;
-  margin-right:10px;
+  
   min-width:700px;
   
 }
@@ -125,15 +191,15 @@ padding:5px;
 /* footer */
 
 footer {
-  position:fixed;
-        float:left;
-       width:150px;
-       margin-top:0px;
-   margin-left:0px;
- box-shadow: 0px 1px 2px #EEEEEE;
-   color: #aaccf2;
-   margin-right:10px;padding-top:0;
-   background-color:rgba(#EAEAEA,1);
+ 
+  float:left;      
+  width:150px;
+  margin-top:0px;
+  margin-left:0px;
+  box-shadow: 0px 1px 2px #EEEEEE;
+  color: #aaccf2;
+  margin-right:10px;padding-top:0;
+  background-color:rgba(#EAEAEA,1);
 }
 
 footer a {

@@ -12,7 +12,7 @@ $('#contentContainer').addClass(' animated bounceInDown');
   var active;
    var links = $('a.link').click(function(event) {
     event.preventDefault();
-
+    
     console.log("removing class active.");
     console.log(event);
    var hash = event.target.hash;
