@@ -11,12 +11,11 @@
           </button>
           <nav class="nav-collapse collapse">
             <ul id="headerList" class="nav nav-pills pull-right" >
-              <li class="active"><%= link_to "Home", '#home'  , class:"link"%></li>
-              <li><%= link_to "Our Stories",    '#stories'    , class:"link"%></li>
-              <li><%= link_to "Photo Albums",    '#album'     , class:"link"%></li>
-              <li><%= link_to "Wedding Registry", '#registry' , class:"link"%></li>
-              <li><%= link_to "Directions",   '#directions'   , class:"link"%></li>
-              <li><%= link_to "Contact Us", '#contact'        , class:"link"%></li>
+            <li class="<%=is_active('home')%>" ><%= link_to "Our Stories",    '/'    , class:"link", :remote=> false , id:"lstories" %></li>
+              <li class="<%=is_active('photos')%>"><%= link_to "Photo Albums",    '/photos'     , class:"link",:remote=> false , id:"lphotos"%></li>
+              <li class="<%=is_active('registry')%>"><%= link_to "Wedding Registry", '/registry' , class:"link", :remote=> false , id:"lregistry" %></li>
+              <li class="<%=is_active('directions')%>"><%= link_to "Directions",   '/directions'   , class:"link", :remote=> false , id:"ldirections" %></li>
+              <li class="<%=is_active('contact')%>"><%= link_to "Contact Us", '/contact'        , class:"link", :remote=> false , id:"lcontact" %></li>
             </ul> 
           </nav>
           </div>

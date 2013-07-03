@@ -10,10 +10,11 @@ html {
 
 body {
    padding-top: 40px;
-    padding-left:0;
-   background:url('bg02.jpg') repeat-x;
-   font-family: 'BentonSans', sans-serif;
-  /*height:100%;*/
+   padding-left:0;
+   background:url('bg02.jpg') repeat-x ; 
+   font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  height:100%;
    margin:0;
    background-position:0px 0px;
 
@@ -21,6 +22,8 @@ body {
   
 
 }
+
+
 @media (max-width: 798px) {
 
   // Padding to set content in a bit
@@ -43,7 +46,6 @@ body {
 .content {
 
   margin-left:0px !important;
-
   min-width:150px !important;
 }
 }
@@ -107,7 +109,7 @@ p {
 }
 
 li {
-     font-family: 'Lobster', Georgia, Times, serif;
+     font-family: Georgia, Times, serif;
 }
 
 /* header */
@@ -133,34 +135,37 @@ li {
    background:url('bg02.jpg') repeat-x;
 }
 #contentBg {
-   margin:0;
+  margin:0;
   min-height:800px;
   /*width:100%;*/
 /*  height:100%;*/
   padding:0;
-
   background:url('jamieLawrence_windowshot-04.jpg') no-repeat;
   background-position:-300px -40px;
 }
-.content {
-  background-color:rgba(white,.2);
+.welcome {
+  letter-spacing: -1px;
+  padding-top: 9px;
+  background-color:transparent;
   margin-top:0px;
-
-  background-repeat:repeat-x;
-  box-sizing:border-box;
-   margin-left:500px;
-    
-  border-radius:10px;
-  padding:0px;
+  color:white;
+}
+.content {
+  /*background-color:rgba(white,.2);*/
  
+  box-sizing:border-box;
+  float:right;
+  margin-right:50px;
+  border-radius:0px;
+  padding:0px;
+  margin-top:0px;
   margin-bottom:0px;
-  
-  min-width:700px;
+  width:700px;
   
 }
 .inner {
    padding:15px;
-   background-color:rgba(#eaeaea,.7); 
+   background-color:rgba(#fff,1); 
      
 }
 .content-left {
@@ -168,17 +173,15 @@ li {
  background-image:url('left_content.png');
 }
 .content-right {
-background-repeat:none;
-
-float:left;
- background-image:url('right_content.png');
+  background-repeat:none;
+  background-image:url('right_content.png');
+  float:left;
+  
 }
  
 .groups {
-  margin:10px; 
-border:rgba(white,0.5) 2px solid;
+margin:5px; 
 padding:5px;
-
  
 }
 .groups .hide {
@@ -198,7 +201,8 @@ footer {
   margin-left:0px;
   box-shadow: 0px 1px 2px #EEEEEE;
   color: #aaccf2;
-  margin-right:10px;padding-top:0;
+  margin-right:10px;
+  padding-top:0;
   background-color:rgba(#EAEAEA,1);
 }
 
@@ -223,5 +227,5 @@ footer ul li {
   float: left;
   margin-left: 10px;
 }
-#map-canvas { height: 350px !important;float:right;width: 59%;}
-#map-canvas-reception { height: 350px !important;float:right;width: 59%; }
+#map-canvas { height: 350px !important;float:right;width: 350px;}
+#map-canvas-reception { height: 350px !important;float:right;width: 350px; }

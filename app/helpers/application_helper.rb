@@ -8,4 +8,7 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
+	def is_active(*links)  
+   		links.each { |link| return "active" if params[:action] == link }
+ 	end
 end

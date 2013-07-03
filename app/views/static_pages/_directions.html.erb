@@ -121,18 +121,22 @@ function calculateRoute(address) {
 	
 }
 //add to the window onload event
- 
+ window.onload = loadScript;
 </script>
+
+<div id="directions" class="">
+	<div class="inner">
+
 <h1>Directions</h1>
   <h4>Ceremony at Gilbert Lambuth Memorial Chapel</h4>
   <hr/>
   <p style="">Start location:
-  <input type ="text" id ="startLocation" name="startLocation" value="Atlanta Airport" style="width:60%"/>
+  <input type ="text" id ="startLocation" name="startLocation" placeholder="Atlanta Airport" style="width:60%"/>
   <input type="button" name="submit"  class="btn btn-large btn-primary"  style="margin-left:15px;padding:10px;" onclick="calculateRoute(startLocation.value)" value ="Submit"/></p>
 
     <div style="  margin-top:10px;">
 	 <div id="" style="background-color:white;padding:10px;height:350px;">
-	 	<div id="directionsPanel" style="font-size:12px;position:relative;width:40%;height:100%;float:left;overflow:scroll"></div>
+	 	<div id="directionsPanel" style="position:relative;width:45%;height:100% !important ;float:left;overflow:scroll"></div>
 	 <div class ="googleMaps">
 	 	<div id="map-canvas" name="map-canvas" style=""></div> 
 	</div></div>
@@ -149,3 +153,6 @@ function calculateRoute(address) {
 	 </div>
 	</div>
 
+
+</div>
+</div>

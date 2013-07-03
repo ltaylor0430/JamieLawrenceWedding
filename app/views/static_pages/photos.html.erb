@@ -1,2 +1,37 @@
-<% provide(:title, 'Our Photos') %>
-<h1>Our Photos</h1>
+
+<script type="text/javascript">
+$(document).ready(function () {
+     $('.flexslider').flexslider({
+            animation: "slide"
+        });
+
+    });
+   
+</script>
+<div id="album" class="">
+	<div class="inner">
+<div class="clearfix"></div>
+<div class="flexslider" style="width:670px;height:350px !important;">
+  <ul class="slides" style="">
+
+     <li>
+	    <%=image_tag "photoalbum/engage1.jpg", style:" height:auto;overflow:hidden"    %>
+		</li>
+		<li>
+	    <%=image_tag "photoalbum/engage2.jpg", style:"height:300px;"  %>
+		</li>
+    <li>
+      <%=image_tag "photoalbum/engage3.jpg", style:"height:300px;"  %>
+    </li>
+		
+    <li>
+      <%=image_tag "photoalbum/2009-venezuela2_960x720.jpg",style:"height:300px;"  %>
+    </li> 
+    <% Dir["/assets/images/photoalbum/*"].each do |file| %>
+       <li><%=image_tag file[/\/.*/], style:"height:300px" %></li>
+    <% end %>
+  </ul>
+</div>
+
+	</div>
+</div>
