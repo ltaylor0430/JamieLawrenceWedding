@@ -17,10 +17,6 @@ body {
   height:100%;
    margin:0;
    background-position:0px 0px;
-
- 
-  
-
 }
 
 
@@ -34,10 +30,16 @@ body {
    
   }
  #contentBg {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important; 
+  -o-background-size: cover !important;
+
+height:auto !important;max-width:100% !important
+}
+ 
+
+.ccwrapper {
+  
 }
 
 .content {
@@ -45,6 +47,7 @@ body {
   margin:0px !important;
   width:auto !important;
   min-width:300px !important;
+
 }
 #map-canvas{width:100%}
 #directionsPanel {
@@ -165,13 +168,16 @@ li {
  
   box-sizing:border-box;
   float:right;
-
+  border-left:1px solid #000;
+  border-right:1px solid #000;
+  border-bottom:1px solid #000;
+  
   margin-right:50px;
   border-radius:2px;
   padding:0px;
   margin-top:0px;
   margin-bottom:0px;
-  width:700px;
+  max-width:700px;
   
 }
 .inner {
@@ -212,7 +218,7 @@ footer {
   margin-left:0px;
   box-shadow: 0px 1px 2px #EEEEEE;
   color: #aaccf2;
-  margin-right:10px;
+  margin-right:150px;
   padding-top:0;
   background-color:rgba(#EAEAEA,1);
 }

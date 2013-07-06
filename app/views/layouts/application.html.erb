@@ -2,11 +2,11 @@
 <html>
 <head>
   <title><%=full_title(yield(:title)) %></title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=798px,initial-scale=0.5">
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Lobster", media:"all" %>
   <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Cabin", media:"all" %>
-    <%= stylesheet_link_tag   "http://fonts.googleapis.com/css?family=Lovers+Quarrel", media:"all" %>
+
   <link rel="shortcut icon" href="<%=image_path 'favicon.ico'%>" >
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -16,17 +16,18 @@
 <body>
   <%= render 'layouts/header' %>    
 <div id="contentBg" class="clearfix">
-    <footer class="footer pull-left hidden-phone"  style="">
-      <div class=" pull-right" style="margin-right:10px" >
+    <footer class="footer"  style="">
+      <div class="pull-right" style="margin-right:10px" >
         <div id="next" class=""  style="text-align:right">
           <h3><span style="color:orange">Jamie</span><br/>Lawrence<br/><span style="color:black">September 14, 2013</span></h3>
         </div>
-        <div class="clearfix"></div>
+        
       </div>
     </footer>
       
-  <div class="row" style="">
-    <div id="contentContainer" class="content">
+  <div class="row ccwrapper" style="margin-left:470px;">
+     
+    <div id="contentContainer" class="clearfix content">
        <%= yield %>
      </div>
   </div>
