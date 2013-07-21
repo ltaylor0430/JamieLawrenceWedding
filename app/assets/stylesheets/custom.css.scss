@@ -9,7 +9,7 @@ html {
 }
 
 body {
-   padding-top: 40px;
+  
    padding-left:0;
    background:url('bg02.jpg') repeat-x ; 
    font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
@@ -19,6 +19,7 @@ body {
    background-position:0px 0px;
 }
 
+@import "bootstrap-responsive.css";
 
 @media (max-width: 798px) {
 
@@ -30,11 +31,8 @@ body {
    
   }
  #contentBg {
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important; 
-  -o-background-size: cover !important;
-
-height:auto !important;max-width:100% !important
+  height:auto !important;
+  max-width:100% !important
 }
  
 
@@ -52,12 +50,11 @@ height:auto !important;max-width:100% !important
 #map-canvas{width:100%}
 #directionsPanel {
   float:left;
-  width:100% !important;
+
 
 }
 #directionsPanel-reception {
   float:left;
-  width:100% !important;
 
 }
 }
@@ -82,7 +79,7 @@ padding:0;
 line-height:0;
  
 }
-@import "bootstrap-responsive";
+
 
 
 .topHeader
