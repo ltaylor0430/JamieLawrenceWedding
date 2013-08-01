@@ -15,6 +15,11 @@ module ApplicationHelper
 			'hotel'
 		end
 	end
+	def getBodyClass(page_title) 
+		return "hotel" if page_title == 'Hotels'
+			
+		
+	end
 	def is_active(*links)  
    		links.each { |link| return "active" if params[:action] == link }
  	end

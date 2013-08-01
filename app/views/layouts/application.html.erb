@@ -13,7 +13,7 @@
   <%= render 'layouts/shim' %>    
   </head>
   
-<body>
+<body class="<%=getBodyClass(yield(:title))%>">
   <%= render 'layouts/header' %>    
 <div id="<%=getContainerId(yield(:title))%>" class="clearfix">
     <footer class="footer <%= 'hide' if (yield(:title)).empty? == false%>" style="">

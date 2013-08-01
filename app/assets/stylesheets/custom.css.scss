@@ -18,7 +18,13 @@ body {
    margin:0;
    background-position:0px 0px;
 }
-
+body.hotel {
+ background:url(image-path('piedmont_park_bg.jpg')) no-repeat fixed !important; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 @import "bootstrap-responsive.css";
 
 @media (max-width: 798px) {
@@ -157,12 +163,7 @@ li {
   background-position:-300px -40px;
 }
 #hotel {
-   margin:0;
-  background:url(image-path('piedmont_park_bg.jpg')) no-repeat; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+ 
 }
 .welcome {
   letter-spacing: -1px;
