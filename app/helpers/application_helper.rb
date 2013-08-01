@@ -8,6 +8,13 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
+	def getContainerId(page_title) 
+		if (page_title.empty? || page_title != 'Hotels')
+			'contentBg'
+		else  
+			'hotel'
+		end
+	end
 	def is_active(*links)  
    		links.each { |link| return "active" if params[:action] == link }
  	end

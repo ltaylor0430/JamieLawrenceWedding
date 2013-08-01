@@ -15,8 +15,8 @@
   
 <body>
   <%= render 'layouts/header' %>    
-<div id="contentBg" class="clearfix">
-    <footer class="footer"  style="">
+<div id="<%=getContainerId(yield(:title))%>" class="clearfix">
+    <footer class="footer <%= 'hide' if (yield(:title)).empty? == false%>" style="">
       <div class="pull-right" style="margin-right:10px" >
         <div id="next" class=""  style="text-align:right">
           <h3><span style="color:orange">Jamie</span><br/>Lawrence<br/><span style="color:black">September 14, 2013</span></h3>

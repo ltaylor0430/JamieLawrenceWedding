@@ -17,4 +17,8 @@ class StaticPagesController < ApplicationController
 
   def story
   end
+
+  def hotels
+    
+  end
 end

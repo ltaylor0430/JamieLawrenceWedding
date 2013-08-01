@@ -32,9 +32,12 @@ body {
   }
  #contentBg {
   height:auto !important;
-  max-width:100% !important
+  max-width:100% !important;
 }
- 
+ #hotel {
+  height:auto !important;
+  max-width:100% !important;
+ }
 
 .ccwrapper {
   
@@ -153,6 +156,14 @@ li {
   background:url('jamieLawrence_windowshot-04.jpg') no-repeat;
   background-position:-300px -40px;
 }
+#hotel {
+   margin:0;
+  background:url(piedmont_park_bg.jpg) no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .welcome {
   letter-spacing: -1px;
   padding-top: 9px;
@@ -162,7 +173,6 @@ li {
 }
 .content {
   /*background-color:rgba(white,.2);*/
- 
   box-sizing:border-box;
   float:right;
   border-left:1px solid #000;

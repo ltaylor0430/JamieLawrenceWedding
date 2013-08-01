@@ -1,9 +1,10 @@
 JamieLawrenceWedding::Application.routes.draw do
   root to: 'static_pages#home'
-  match '/photos', to: 'static_pages#photos'
-  match '/directions', to: 'static_pages#directions'
-  match '/registry', to: 'static_pages#registry'
-  match '/contact', to: 'static_pages#contact'
+  match '/photos', to: 'static_pages#photos', via: 'get'
+  match '/directions', to: 'static_pages#directions', via: 'get'
+  match '/registry', to: 'static_pages#registry', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/hotels', to: 'static_pages#hotels', via: 'get'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
