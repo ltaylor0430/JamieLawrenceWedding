@@ -27,7 +27,7 @@ body {
   body {
     padding-left: 0px !important;
     padding-right:0px !important;
-    background:url('bg02.jpg') repeat-x !important;
+    background:url(image-path('bg02.jpg')) repeat-x !important;
    
   }
  #contentBg {
@@ -145,7 +145,7 @@ li {
 
 }
 #containerDiv {
-   background:url('bg02.jpg') repeat-x;
+   background:url(image-path('bg02.jpg')) repeat-x;
 }
 #contentBg {
   margin:0;
@@ -153,12 +153,12 @@ li {
   /*width:100%;*/
 /*  height:100%;*/
   padding:0;
-  background:url('jamieLawrence_windowshot-04.jpg') no-repeat;
+  background:url(image-path('jamieLawrence_windowshot-04.jpg')) no-repeat;
   background-position:-300px -40px;
 }
 #hotel {
    margin:0;
-  background:url('piedmont_park_bg.jpg') no-repeat; 
+  background:url(image-path('piedmont_park_bg.jpg')) no-repeat; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
